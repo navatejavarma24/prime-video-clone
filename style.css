@@ -4,7 +4,31 @@ font-family:Arial, Helvetica, sans-serif;
 background:#0f171e;
 color:white;
 }
+.light{
+background:white;
+color:black;
+}
 
+.light .navbar-custom{
+background:#f2f2f2;
+}
+
+.light .menu a{
+color:black;
+}
+
+.light .menu a:hover{
+color:#0077cc;
+}
+
+#themeToggle{
+padding:6px 12px;
+border:none;
+border-radius:4px;
+cursor:pointer;
+background:#00a8e1;
+color:white;
+}
 .navbar-custom{
 display:flex;
 justify-content:space-between;
