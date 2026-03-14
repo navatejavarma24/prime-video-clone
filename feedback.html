@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feedback Form</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:#0f171e;
+color:white;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.container{
+background:#1c2a33;
+padding:30px;
+border-radius:10px;
+width:400px;
+}
+
+h2{
+text-align:center;
+margin-bottom:20px;
+}
+
+label{
+display:block;
+margin-top:10px;
+}
+
+input, textarea, select{
+width:100%;
+padding:10px;
+margin-top:5px;
+border:none;
+border-radius:5px;
+}
+
+button{
+width:100%;
+padding:10px;
+margin-top:15px;
+background:#00a8e1;
+color:white;
+border:none;
+border-radius:5px;
+font-size:16px;
+cursor:pointer;
+}
+
+button:hover{
+background:#008bb8;
+}
+
+.success{
+margin-top:10px;
+text-align:center;
+color:#00ff99;
+font-weight:bold;
+display:none;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Feedback Form</h2>
+
+<form id="feedbackForm">
+
+<label>Name</label>
+<input type="text" id="name" placeholder="Enter your name" required>
+
+<label>Email</label>
+<input type="email" id="email" placeholder="Enter your email" required>
+
+<label>Rating</label>
+<select id="rating" required>
+<option value="">Select Rating</option>
+<option>Excellent</option>
+<option>Good</option>
+<option>Average</option>
+<option>Poor</option>
+</select>
+
+<label>Your Feedback</label>
+<textarea id="message" rows="4" placeholder="Write your feedback..." required></textarea>
+
+<button type="submit">Submit Feedback</button>
+
+</form>
+
+<p class="success" id="successMsg">Thank you for your feedback!</p>
+
+</div>
+
+<script>
+
+const form = document.getElementById("feedbackForm");
+const successMsg = document.getElementById("successMsg");
+
+form.addEventListener("submit", function(e){
+
+e.preventDefault();
+
+successMsg.style.display = "block";
+
+form.reset();
+
+});
+
+</script>
+
+</body>
+</html>
