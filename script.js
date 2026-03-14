@@ -1,8 +1,9 @@
+document.addEventListener("DOMContentLoaded", function(){
 
 const toggle = document.getElementById("toggleTheme");
 
 if(toggle){
-toggle.addEventListener("click",function(){
+toggle.addEventListener("click", function(){
 document.body.classList.toggle("dark-mode");
 });
 }
@@ -11,19 +12,22 @@ const form = document.getElementById("feedbackForm");
 
 if(form){
 
-form.addEventListener("submit",function(e){
+form.addEventListener("submit", function(e){
 
-const name=document.getElementById("name").value;
-const email=document.getElementById("email").value;
-const message=document.getElementById("message").value;
-const error=document.getElementById("error");
+const name = document.getElementById("name").value.trim();
+const email = document.getElementById("email").value.trim();
+const message = document.getElementById("message").value.trim();
+const error = document.getElementById("error");
 
-error.textContent="";
+error.textContent = "";
 
-if(name=="" || email=="" || message==""){
+if(name === "" || email === "" || message === ""){
 e.preventDefault();
-error.textContent="All fields are required";
+error.textContent = "All fields are required";
 }
 
 });
+
 }
+
+});
